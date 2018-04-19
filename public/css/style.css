@@ -1,0 +1,39 @@
+.navbar-brand {
+    font-size: 1.5em;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #ffc107;
+}
+.navbar {
+    position: relative;
+    padding: .5rem 1rem; 
+}
+
+.form-inline .form-control {
+    width: 500px;
+    
+}
+.firstheight {
+    height: 35px;
+}
+.secondheight {
+    height: 85px;
+    line-height: 1.5;
+}
+.mr-sm-2, .mx-sm-2 {
+    height: 45px;
+}
+.btnheight {
+    height: 45px;
+}
+.theight {
+    height: 44px;
+    background-color: rgba(52, 58, 64, 0.5);
+    
+}
+.aa {
+    background-color: rgba(52, 58, 64, 0.5);
+}

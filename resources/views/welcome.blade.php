@@ -1,3 +1,4 @@
+@include('layouts.app')
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -5,25 +6,22 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Web Store</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+        <link href="{{ asset('fonts/fontawesome/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css') }}" rel="stylesheet">
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
                 font-family: 'Raleway', sans-serif;
-                font-weight: 100;
                 height: 100vh;
-                margin: 0;
+                margin: 0;    
             }
 
-            .full-height {
+            {{--  .full-height {
                 height: 100vh;
-            }
+            }  --}}
 
             .flex-center {
                 align-items: center;
@@ -46,7 +44,7 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 70px;
             }
 
             .links > a {
@@ -60,7 +58,12 @@
             }
 
             .m-b-md {
-                margin-bottom: 30px;
+                margin-bottom: 25px;
+            }
+            
+            body {
+                background-color: #ffc107;
+                color: #343a40;
             }
         </style>
     </head>
@@ -70,25 +73,19 @@
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
+                    {{--  @else  --}}
+
                     @endauth
                 </div>
             @endif
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <b class="text-dark"> Welcome  Web Store </b> <br/> <br/>
+                    <i class="fas fa-shopping-cart fa-3x"></i>
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+
             </div>
         </div>
     </body>
