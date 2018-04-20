@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App;
 
 class productsController extends Controller
 {
@@ -13,7 +14,7 @@ class productsController extends Controller
      */
     public function index()
     {
-        //
+       
     }
 
     /**
@@ -34,7 +35,37 @@ class productsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $product = new App\products(); 
+        $product->name            = $request->input('name');
+        $product->fk_weight_id    = $request->input('weight');
+        $product->fk_brand_id     = $request->input('brand');
+        $product->fk_quality_id   = $request->input('quality');
+        $product->fk_model_id     = $request->input('model');
+        $product->fk_quantity_id  = $request->input('quantity');
+        $product->fk_category_id  = $request->input('category');
+        $product->fk_condition_id = $request->input('condition');
+        $product->fk_color_id     = $request->input('color');
+        $product->fk_price_id     = $request->input('price');
+        $product->description     = $request->input('description');
+
+        $product->files;
+        $files = request()->input('file');
+            foreach ($files as $file) 
+            {
+                $name                = $file->getClientOriginalName();
+                $ext                 = $file->getClientOriginalExtension(); 
+                $size                = $file->getSize(); 
+                $type                = $file->getMimeType(); 
+                $realpath            = $file->getRealPath(); 
+                $location            = $file->move(public_path('uploads'), $name);
+
+                $file->file_path     = $realpath;
+                $file->type          = $type;
+                $file->size          = $size;
+            }
+        $product->save();
+        return back();
+
     }
 
     /**

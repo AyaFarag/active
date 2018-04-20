@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class wish-list extends Model
+class wishlist extends Model
 {
     //
 }

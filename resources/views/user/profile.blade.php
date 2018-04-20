@@ -4,7 +4,7 @@
 
 
 {{--  bootstrap nav  --}}
-<div class="container">
+<div class="container bg-white p-5" style="height: 700px">
 <h2 class=""> User Profile </h2>
 <div class="row">
         <div class="col-3">

@@ -33,3 +33,10 @@ Route::get('login/google/callback', 'Auth\LoginController@googlehandleProviderCa
 Route::get('profile', function(){
     return view('user.profile');
 });
+
+// Admin cPanel 
+Route::resource('cPanel', 'adminController');
+
+// product routes
+Route::resource('product', 'productsController');
+
