@@ -110,7 +110,7 @@
                 <div class="form-row"> 
                   <div class="form-group col-md-12">
                       <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="customFile" name="file()" multiple="yes">
+                          <input type="file" class="custom-file-input" id="customFile" name="file()" multiple>
                           <label class="custom-file-label" for="customFile">Choose file</label>
                       </div>
                     </div>

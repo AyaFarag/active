@@ -61,7 +61,7 @@ class productsController extends Controller
 
                 $file->file_path     = $realpath;
                 $file->type          = $type;
-                $file->size          = $size;
+                $file->size          = $size; 
             }
         $product->save();
         return back();

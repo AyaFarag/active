@@ -5,4 +5,5 @@
 @include('layouts.nav')
 
 
-@include('layouts.footer')
+
+
