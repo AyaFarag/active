@@ -52,6 +52,7 @@ class productsController extends Controller
         if ($request->hasFile('file')) {
             foreach ($request->file as $file) 
             {
+              //  $files = new App\files();
                 $name                = $file->getClientOriginalName();
                 $ext                 = $file->getClientOriginalExtension(); 
                 $size                = $file->getSize(); 
@@ -70,7 +71,7 @@ class productsController extends Controller
                 // $product->save();
                 // return back();
 
-        dd($location);
+        dd($files);
 
     }
 
