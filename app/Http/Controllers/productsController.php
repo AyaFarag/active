@@ -48,9 +48,9 @@ class productsController extends Controller
         $product->fk_price_id     = $request->input('price');
         $product->description     = $request->input('description');
 
-        $product->files;
-        $files = request()->input('file');
-            foreach ($files as $file) 
+        
+        if ($request->hasFile('file')) {
+            foreach ($request->file as $file) 
             {
                 $name                = $file->getClientOriginalName();
                 $ext                 = $file->getClientOriginalExtension(); 
@@ -58,13 +58,19 @@ class productsController extends Controller
                 $type                = $file->getMimeType(); 
                 $realpath            = $file->getRealPath(); 
                 $location            = $file->move(public_path('uploads'), $name);
-
-                $file->file_path     = $realpath;
-                $file->type          = $type;
-                $file->size          = $size; 
             }
-        $product->save();
-        return back();
+        }
+
+                // $files = new App\files();
+                // $files->file_path     = $location;
+                // $files->type          = $type;
+                // $files->size          = $size; 
+                
+                // $product = $file ;    
+                // $product->save();
+                // return back();
+
+        dd($location);
 
     }
 

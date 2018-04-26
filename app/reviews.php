@@ -21,6 +21,6 @@ class reviews extends Model
     
     // relashion methods
     public function products() {
-        return  $this->belongsTo('App\products');
+        return  $this->belongsTo('App\products' , 'fk_product_id');
     }
 }
