@@ -1,11 +1,13 @@
-@include('layouts.app')
+@extends('layouts.app')
+
+@section('x')
 
 
-<div class="container">
+<div class="container-fluid bg-white" style="height:700px; ">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header bg-dark text-white">{{ __('Register') }}</div>
+            <div class="card bg-light">
+                <div class="card-header text-dark">{{ __('Register') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -74,7 +76,7 @@
         </div>
     </div>
 </div>
-
-@include('layouts.footer')
+@endsection
+{{-- @include('layouts.footer') --}}
 
 

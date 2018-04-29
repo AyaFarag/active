@@ -1,6 +1,6 @@
 <div> 
         <form action="{{route('product.store')}}" method="POST">
-            @csrf
+            {{ csrf_field()}}
           <div class="form-row">
             <div class="form-group col-md-9">
               <label for="inputEmail4">Item Name</label>

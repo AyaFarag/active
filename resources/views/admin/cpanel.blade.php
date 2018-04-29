@@ -1,6 +1,8 @@
 @include('layouts.header')
 @include('admin.adminheader')
 
+
+{{-- @section('x') --}}
 <div class="card border border-warning">
   <div class="card-header bg-warning  text-dark" style="height:50px; line-height:1">
       <strong style="font-size:1.8em">Admin cPanel</strong> 
@@ -53,4 +55,6 @@
 
     </div>
   </div>
+{{-- @endsection --}}
+
 @include('layouts.footer')

@@ -4,6 +4,10 @@
 
 @include('layouts.nav')
 
+@yield('x')
+
+@include('layouts.footer')
+
 
 
 

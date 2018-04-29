@@ -11,7 +11,7 @@ class files extends Model
     protected $table = 'files';
 
     protected $fillable = [
-        'file_path','type','size','product_id'
+        'file_path','type','size','fk_product_id'
     ];
 
     // self model method

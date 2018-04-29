@@ -1,4 +1,5 @@
-@include('layouts.app')
+@extends('layouts.app')
+@section('x')
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -90,4 +91,5 @@
         </div>
     </body>
 </html>
-@include('layouts.footer')
+@endsection
+{{-- @include('layouts.footer') --}}

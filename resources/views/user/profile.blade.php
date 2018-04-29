@@ -1,8 +1,6 @@
-@include('layouts.app')
+@extends('layouts.app')
 
-
-
- 
+@section('x') 
 
 {{--  bootstrap nav  --}}
 <div class="container-fluid bg-white p-5" style="height: 700px">
@@ -27,5 +25,5 @@
           </div>
         </div>
       </div>
-
-      @include('layouts.footer')
+@endsection
+      {{-- @include('layouts.footer') --}}

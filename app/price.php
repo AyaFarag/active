@@ -12,7 +12,7 @@ class price extends Model
     protected $table = 'prices';
 
     protected $fillable = [
-        'fixed_price','sall_price'
+        'fixed_price','sale_price'
     ];
 
     // self model method

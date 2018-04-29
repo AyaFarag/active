@@ -20,7 +20,10 @@
 
 
     <!-- Styles -->
+
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugin/OwlCarousel/dist/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('plugin/OwlCarousel/dist/assets/owl.theme.default.min.css')}}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('fonts/fontawesome/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css') }}" rel="stylesheet">
 

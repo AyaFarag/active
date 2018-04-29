@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Database\Query\Builder;
 use App;
+use files;
 
 class productsController extends Controller
 {
@@ -36,7 +38,7 @@ class productsController extends Controller
     public function store(Request $request)
     {
         $product = new App\products(); 
-        $product->name            = $request->input('name');
+        $product->name      = $request->input('name');
         $product->fk_weight_id    = $request->input('weight');
         $product->fk_brand_id     = $request->input('brand');
         $product->fk_quality_id   = $request->input('quality');
@@ -48,19 +50,19 @@ class productsController extends Controller
         $product->fk_price_id     = $request->input('price');
         $product->description     = $request->input('description');
 
-        
-        if ($request->hasFile('file')) {
-            foreach ($request->file as $file) 
-            {
-              //  $files = new App\files();
-                $name                = $file->getClientOriginalName();
-                $ext                 = $file->getClientOriginalExtension(); 
-                $size                = $file->getSize(); 
-                $type                = $file->getMimeType(); 
-                $realpath            = $file->getRealPath(); 
-                $location            = $file->move(public_path('uploads'), $name);
-            }
-        }
+      //  $file = $request->hasFile('file');
+        // if ($request->hasFile('file')) {
+        //     foreach ($request->file as $file) 
+        //     {
+        //       //  $files = new App\files();
+        //         $name                = $file->getClientOriginalName();
+        //         $ext                 = $file->getClientOriginalExtension(); 
+        //         $size                = $file->getSize(); 
+        //         $type                = $file->getMimeType(); 
+        //         $realpath            = $file->getRealPath(); 
+        //         $location            = $file->move(public_path('uploads'), $name);
+        //     }
+        // }
 
                 // $files = new App\files();
                 // $files->file_path     = $location;
@@ -69,10 +71,12 @@ class productsController extends Controller
                 
                 // $product = $file ;    
                 // $product->save();
-                // return back();
+                // 
 
-        dd($files);
-
+        // dd($files);
+        // $product->save();
+        // return back();
+        var_dump($product);
     }
 
     /**
